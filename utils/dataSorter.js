@@ -1,13 +1,13 @@
 export default class DataSorter {
   constructor() {}
 
-  compareStrings = (s1, s2) =>
+  static compareStrings = (s1, s2) =>
     s1.localeCompare(s2, "en", {
       sensitivity: "base",
       ignorePunctuation: true,
     });
 
-  compare = (a, b) => {
+  static compare = (a, b) => {
     const splitA = a.split(" ");
     const splitB = b.split(" ");
     const lastA = splitA[splitA.length - 1];
@@ -18,7 +18,7 @@ export default class DataSorter {
       : this.compareStrings(lastA, lastB);
   };
 
-  sortRecords(data) {
+  static sortRecords(data) {
     return [...data].sort(this.compare).join(" \n");
   }
 }
