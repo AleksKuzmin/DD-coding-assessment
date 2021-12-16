@@ -12,6 +12,7 @@ export default class DataReader {
           console.log(error);
           reject(error);
         }
+        console.log(data.split("\n"));
         resolve(data.split("\n"));
       });
     });
