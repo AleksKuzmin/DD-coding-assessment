@@ -5,13 +5,6 @@ export default class DataWriter {
     this.filename = filename;
   }
 
-  mockWriteFile(data) {
-    return new Promise((resolve) => {
-      console.log(data);
-      resolve();
-    });
-  }
-
   writeFile(data) {
     return new Promise((resolve, reject) => {
       fs.writeFile(this.filename, data, (err) => {
