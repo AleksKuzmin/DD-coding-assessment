@@ -1,4 +1,4 @@
-import DataReader from "./dataReader";
+import DataReader from "../utils/dataReader";
 import "regenerator-runtime/runtime";
 
 const inputFile = "unsorted-names-list.txt";
