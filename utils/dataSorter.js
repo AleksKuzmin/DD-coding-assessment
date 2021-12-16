@@ -19,6 +19,6 @@ export default class DataSorter {
   };
 
   static sortRecords(data) {
-    return [...data].sort(this.compare).join(" \n");
+    return [...data].sort(this.compare).join("\n");
   }
 }
