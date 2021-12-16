@@ -7,10 +7,9 @@ const outputFileName = "sorted-names-list.txt";
 
 const dataReader = new DataReader(inputFileName);
 const dataWriter = new DataWriter(outputFileName);
-const dataSorter = new DataSorter();
 
 dataReader.readFile().then((unsortedData) => {
-  const sortedData = dataSorter.sortRecords(unsortedData);
+  const sortedData = DataSorter.sortRecords(unsortedData);
   dataWriter
     .writeFile(sortedData)
     .then(() => {
