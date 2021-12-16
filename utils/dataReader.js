@@ -7,14 +7,13 @@ export default class DataReader {
 
   readFile() {
     return new Promise((resolve, reject) => {
-      fs.readFile(this.filename, "utf-8", function (error, data) {
-        if (error) {
-          console.log(error);
-          reject(error);
-        }
-        console.log(data.split("\n"));
-        resolve(data.split("\n"));
-      });
+      try {
+        fs.readFile(this.filename, "utf-8", (error, data) => {
+          resolve(data.split("\n"));
+        });
+      } catch (e) {
+        reject("Error occured while reading the input file");
+      }
     });
   }
 }
