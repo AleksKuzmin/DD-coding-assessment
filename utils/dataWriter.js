@@ -7,10 +7,14 @@ export default class DataWriter {
 
   writeFile(data) {
     return new Promise((resolve, reject) => {
-      fs.writeFile(this.filename, data, (err) => {
-        if (err) reject(err);
-        resolve();
-      });
+      try {
+        fs.writeFile(this.filename, data, (err) => {
+          if (err) reject(err);
+          resolve();
+        });
+      } catch (e) {
+        reject("Error occured while writing the output file");
+      }
     });
   }
 }
