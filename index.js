@@ -1,8 +1,9 @@
 import DataReader from "./utils/dataReader.js";
 import DataSorter from "./utils/dataSorter.js";
 import DataWriter from "./utils/dataWriter.js";
+import { argv } from "process";
 
-const inputFileName = "unsorted-names-list.txt";
+const inputFileName = argv.slice(2).toString();
 const outputFileName = "sorted-names-list.txt";
 
 const dataReader = new DataReader(inputFileName);

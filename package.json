@@ -21,7 +21,6 @@
   "homepage": "https://github.com/AleksKuzmin/DD-coding-assessment#readme",
   "dependencies": {
     "fs": "0.0.1-security",
-    "express": "^4.17.1",
     "nodemon": "^2.0.15"
   },
   "devDependencies": {
