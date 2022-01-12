@@ -1,4 +1,4 @@
-# Small SOLID project
+# Small S.O.L.I.D project
 
 
 ## The Goal: Name Sorter
